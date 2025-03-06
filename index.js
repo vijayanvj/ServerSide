@@ -7,7 +7,7 @@ const orders=require('./Router/orderRoute')
 connectdatabase();
 app.use(express.json())
 app.use(cors());
-app.use('/api/v1',products)
+app.use(products)
 app.use('/api/v1',orders)
 app.listen(3200,(req,res)=>{
     console.log("server is running port 3200")
